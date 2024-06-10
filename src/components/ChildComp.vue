@@ -1,21 +1,25 @@
 <template>
   <div>
     <h2 style="title">Child Component</h2>
-    <p :style="{
-      color: color,
-      backgroundColor: bgColor
-    }">{{ color }}</p>
+    <p
+      :style="{
+        color: color,
+        backgroundColor: bgColor,
+      }"
+    >
+      {{ color }}
+    </p>
   </div>
 </template>
-  
+
 <script setup>
+// composition api에서 props를 받는 방법
+// defineProps({ props변수명: 자료형, })
 const props = defineProps({
   color: String,
   bgColor: String,
-})
+});
 console.log(props.color);
 </script>
-  
-<style scoped>
 
-</style>
+<style scoped></style>
